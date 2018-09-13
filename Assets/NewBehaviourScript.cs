@@ -73,7 +73,7 @@ public class NewBehaviourScript : MonoBehaviour
         Boss lastboss = new Boss();
 
 
-        for ( int i = 0; i < 15; i++)
+        for ( int i = 0; i < 11; i++)
         {
             lastboss.Magic(5);
         }
