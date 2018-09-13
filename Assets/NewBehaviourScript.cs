@@ -8,6 +8,8 @@ public class Boss
     private int hp = 100;          // 体力
     private int power = 25; // 攻撃力
     private int mp = 53; //マジックポイント
+
+
     // 攻撃用の関数
     public void Attack()
     {
@@ -24,9 +26,9 @@ public class Boss
     }
     //魔法攻撃用の関数
     public void Magic(int minddamage)
-    {
-        
-        if (mp >= minddamage)
+    {   
+
+        if (mp > minddamage)
         {
             //残りMPの表示
             this.mp -= minddamage;
@@ -35,8 +37,8 @@ public class Boss
         else
         {
             //残りMPの表示
-            this.mp -= minddamage;
-            Debug.Log("MPが足りない為、魔法が使えない");
+            Debug.Log("MPが足りない為、魔法が使えない。残りMP："+mp);
+
         }   
         
 
@@ -71,7 +73,7 @@ public class NewBehaviourScript : MonoBehaviour
         Boss lastboss = new Boss();
 
 
-        for ( int i = 0; i < 11; i++)
+        for ( int i = 0; i < 15; i++)
         {
             lastboss.Magic(5);
         }
